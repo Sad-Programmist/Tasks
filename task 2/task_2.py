@@ -68,7 +68,7 @@ def output(input_list, shift_size, position):
 
 
 def test(input_list):
-    if len(input_list) == 0:
+    if len(input_list) <= 0 or len(input_list[0]) <= 0:
         return False
     for row in range(len(input_list)):
         if len(input_list[0]) != len(input_list[row]):
