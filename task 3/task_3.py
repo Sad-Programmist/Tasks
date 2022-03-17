@@ -34,11 +34,7 @@ class Triangle:
         return False
 
     def __str__(self):
-        return "A({0}, {1}), B({2}, {3}), C({4}, {5})".format(
-            self.a.x, self.a.y,
-            self.b.x, self.b.y,
-            self.c.x, self.c.y,
-        )
+        return "A({0}, {1}), B({2}, {3}), C({4}, {5})".format(self.a.x, self.a.y, self.b.x, self.b.y, self.c.x, self.c.y)
 
     def quarter(self):
         if self.a.get_quarter() == self.b.get_quarter() == self.c.get_quarter() > 0:
@@ -46,7 +42,7 @@ class Triangle:
         return False
 
     def exist(self):
-        if 0 == abs((self.a.x-self.c.x)*(self.b.y-self.c.y)-(self.b.x-self.c.x)*(self.a.y-self.c.y)):
+        if 0 == abs((self.a.x - self.c.x) * (self.b.y - self.c.y) - (self.b.x - self.c.x) * (self.a.y - self.c.y)):
             return False
         return True
 
